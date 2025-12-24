@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 
 async function getdata() {
-  const res = await fetch('http://localhost:3000/api/posts', { cache: 'no-store',});
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/posts`, { cache: 'no-store',});
 
   if (!res.ok){
     throw new Error('failed to fetch data')
