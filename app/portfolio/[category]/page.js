@@ -29,8 +29,8 @@ const Category = async({params}) => {
           <p className='descrip text-base sm:text-lg lg:text-[20px] mb-3 lg:mb-5'>{item.desc}</p>
           <Button text={"See More"} url={"#"} />
         </div>
-        <div className="imgcontiner flex-1 h-[250px] sm:h-[350px] lg:h-[500px] relative">
-          <Image className='img object-cover' src={item.image} alt='' fill={true} />
+        <div className="imgcontiner w-full lg:flex-1 h-[250px] sm:h-[350px] lg:h-[500px] relative">
+          <Image className='img object-cover w-full h-full' src={item.image} alt='' fill={true} />
         </div>
       </div>
       ))}

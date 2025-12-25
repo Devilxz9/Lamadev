@@ -2,6 +2,9 @@
 import { signIn, signOut, useSession } from 'next-auth/react'
 import React from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import Dashboard from '../../page'
+import { register } from 'next/dist/next-devtools/userspace/pages/pages-dev-overlay-setup'
 
 const Login = () => {
   const router = useRouter()
@@ -26,7 +29,7 @@ const Login = () => {
 
 
   return (
-   <div className='flex justify-center items-center flex-col gap-6 lg:gap-10 px-4'>
+   <div className='flex justify-center items-center flex-col gap-6 lg:gap-6 px-4'>
       <form className="w-full sm:w-[350px] lg:w-[300px] flex flex-col gap-4 lg:gap-[20px]" onSubmit={handleSubmit}>
         <input type="email" placeholder='email' className='inputt' required />
         <input type="password" placeholder='password' className='inputt' required />
@@ -34,6 +37,9 @@ const Login = () => {
         <button className='bg-[#53c28b] rounded-[3px] h-12 lg:h-[50px] text-white font-semibold text-base lg:text-[17px] hover:scale-105 transition-all duration-200 ease-in-out'>Login</button>
       </form>
       <button className='cursor-pointer text-sm sm:text-base hover:text-[#53c28b] transition-colors' onClick={() => signIn("google")}>Login with Google</button>
+      <Link href={"/dashboard/register"}>
+      New User? Register here
+      </Link>
 
 
     </div>

@@ -13,7 +13,7 @@ const Contact = () => {
    <div className='continer'>
       <h1 className='title text-3xl sm:text-4xl lg:text-[60px] mb-12 lg:mb-[100px] text-center font-bold'>Let's Keep in Touch</h1>
       <div className='contentt flex flex-col lg:flex-row gap-12 lg:gap-[100px] items-center'>
-        <div className='imgcontiner flex-1 h-[300px] sm:h-[400px] lg:h-[500px] relative w-full order-1 lg:order-none'>
+        <div className='imgcontiner lg:flex-1 h-[300px] sm:h-[400px] lg:h-[500px] relative w-full order-1 lg:order-none'>
           <Image src='/contact.png' alt='' fill={true} className='image object-contain animation' />
         </div>
           <form className='form flex-1 flex flex-col gap-5 lg:gap-[20px] w-full order-2 lg:order-none' action="">
